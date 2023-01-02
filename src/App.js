@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { ApiContext } from "./contextState/ApiContext";
+import { FetchApi } from "./components/fetchApi/FetchApi";
+import { Navbar } from "./components/navbar/Navbar";
+import { CartContext } from "./contextState/CartContext";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
+  const [apiData, setApiData] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApiContext.Provider value={{ apiData, setApiData }}>
+      <CartContext.Provider value={{ cartItems, setCartItems }}>
+        <div className="App">
+          <FetchApi />
+          <Navbar />
+          <Footer />
+        </div>
+      </CartContext.Provider>
+    </ApiContext.Provider>
   );
 }
 
