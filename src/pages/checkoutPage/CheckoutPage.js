@@ -5,14 +5,19 @@ import {
   StyledLabel,
 } from "../../components/StyledComponents";
 
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../contextState/CartContext";
 
 export const CheckoutPage = () => {
+  const { setCartItems } = useContext(CartContext);
   let navigate = useNavigate();
 
+  // navigate to purchase complete page and clear shopping cart.
   const transaction = () => {
     let path = "/purchase-complete-page";
     navigate(path);
+    setCartItems([]);
   };
 
   return (
