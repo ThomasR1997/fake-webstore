@@ -8,7 +8,7 @@ export const ContentWrap = styled.div`
 
 // Navbar
 export const StyledNavbar = styled.div`
-  background-color: orange;
+  background-color: #ffb703;
   width: 100%;
   height: 5em;
   display: flex;
@@ -58,6 +58,10 @@ export const StyledButton = styled.button`
 
   &:hover {
     filter: brightness(105%);
+  }
+
+  &:active {
+    color: yellow;
   }
 `;
 
@@ -121,7 +125,7 @@ export const CartIcon = styled(AiOutlineShoppingCart)`
 
 // Footer
 export const StyledFooter = styled.div`
-  background-color: orange;
+  background-color: #ffb703;
   width: 100%;
   height: 5em;
 

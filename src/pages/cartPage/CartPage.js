@@ -25,6 +25,8 @@ export const CartPage = () => {
     initialValue
   );
 
+  const totalPrice = total.toFixed(2);
+
   // Wip, trying to make a quantity selector for products
 
   // const decrease = () => {
@@ -80,7 +82,7 @@ export const CartPage = () => {
               <StyledButton wide>To checkout</StyledButton>
             </NavLink>
 
-            <h4>${total}</h4>
+            <h4>${totalPrice}</h4>
           </CartDiv>
         </CartSection>
       </ContentWrap>

@@ -54,7 +54,7 @@ export const JeweleryPage = () => {
                     handleClick(item.title, item.image, item.price)
                   }
                 >
-                  ADD TO CART
+                  Add to cart
                 </StyledButton>
               </Card>
             );

@@ -23,7 +23,7 @@ export const CheckoutPage = () => {
   return (
     <ContentWrap>
       <form action="" method="" id="form1" onSubmit={() => transaction()}>
-        <StyledLabel for="email">Email</StyledLabel>
+        <StyledLabel htmlFor="email">Email</StyledLabel>
         <StyledInput
           type="email"
           id="email"
@@ -49,7 +49,7 @@ export const CheckoutPage = () => {
         <StyledInput type="text" placeholder="Country" required />
 
         <h3>Card information</h3>
-        <StyledLabel for="name">Name on card</StyledLabel>
+        <StyledLabel htmlFor="name">Name on card</StyledLabel>
         <br />
 
         <StyledInput type="text" id="name" placeholder="John Doe" required />
