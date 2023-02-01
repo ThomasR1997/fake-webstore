@@ -1,4 +1,4 @@
-import { useContext /* useState */ } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import {
   CartDiv,
@@ -6,9 +6,6 @@ import {
   CartSection,
   ContentWrap,
   ProductTitleDiv,
-  // QuantityButton,
-  // QuantityDiv,
-  // ShowQuantity,
   StyledButton,
 } from "../../components/StyledComponents";
 
